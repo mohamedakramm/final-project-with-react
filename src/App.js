@@ -1,12 +1,22 @@
 
-import { Button } from 'react-bootstrap';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import SiteNav from './layout/SiteNav';
+import Home from './components/Home';
+import About from './components/About';
+import ReduxExample from './components/ReduxExample';
 
 function App() {
   return (
     <div className="App">
-      hello
-      <Button variant='primary'>OK</Button>
+     <SiteNav/>
+     <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/about' element={<About/>}></Route>
+      <Route path='/redux_example' element={<ReduxExample/>}></Route>
+
+     </Routes>
     </div>
   );
 }
