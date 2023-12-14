@@ -1,8 +1,13 @@
-import {Container,Nav,Navbar} from 'react-bootstrap';
+import {Button, Container,Nav,Navbar} from 'react-bootstrap';
 import {  NavLink } from 'react-router-dom';
+import  i18n  from 'i18next';
 
+let handelLanguage=()=>{
+  i18n.changeLanguage(i18n.language==="en"?"ar":"en")
+}
 
 export default function SiteNav() {
+  
   return (
     <Navbar expand="md" className="bg-body-tertiary">
     <Container>
@@ -13,7 +18,9 @@ export default function SiteNav() {
           <NavLink to="/" className="nav-link">Home</NavLink>
           <NavLink to="/about" className="nav-link">About</NavLink>
           <NavLink to="/redux_example" className="nav-link">ReduxExample</NavLink>
-          
+          <Button onClick={handelLanguage}>
+            {i18n.language==="en"?"التغير الي العربيه":"change to english"}
+          </Button>
             
         </Nav>
       </Navbar.Collapse>
