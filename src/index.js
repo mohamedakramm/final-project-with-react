@@ -5,7 +5,6 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { createRoot } from 'react-dom/client';
 import i18n from "i18next";
 import {  initReactI18next } from "react-i18next";
 import EnglishTranslation from "./locale/en.json";
